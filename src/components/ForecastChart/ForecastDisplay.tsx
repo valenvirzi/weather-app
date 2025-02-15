@@ -4,8 +4,6 @@ import ForecastChart from "./ForecastChart";
 const ForecastDisplay: React.FC = () => {
   const theme = useWeatherTheme();
 
-  // TODO: Refactorizar componente basándose en el proyecto original.
-
   return (
     <section
       className={`card z-10 flex flex-col gap-4 rounded-lg p-2 md:px-3`}

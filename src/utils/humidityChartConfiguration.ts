@@ -40,8 +40,6 @@ export const humidityChartOptions: ChartOptions<"bar"> = {
   },
 };
 
-// TODO: Find out why the bars opacity is not set to max unless i hover over each one.
-
 export const humidityChartData = (list: ForecastItem[] | undefined) => ({
   labels: list?.map((item) => item.dt_txt) || [],
   datasets: [
