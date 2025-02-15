@@ -45,6 +45,7 @@ const useReverseGeocoding = () => {
           longitude: coordinates.longitude,
           country: result[0].country,
           state: result[0].state,
+          id: `${coordinates.latitude},${coordinates.longitude}`,
         };
 
         setCity(cityData); // Update the state with the fetched city data
