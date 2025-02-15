@@ -18,12 +18,14 @@ const useAutoUpdateWeather = () => {
 
     const isDataStale = Date.now() - timestamp > THREE_HOURS_MS;
 
-    if (isDataStale) {
-      fetchCurrentWeather({
-        latitude: city.latitude,
-        longitude: city.longitude,
-      });
-      fetchForecast({ latitude: city.latitude, longitude: city.longitude });
+    if (city) {
+      if (isDataStale) {
+        fetchCurrentWeather({
+          latitude: city.latitude,
+          longitude: city.longitude,
+        });
+        fetchForecast({ latitude: city.latitude, longitude: city.longitude });
+      }
     }
   }, [fetchCurrentWeather, fetchForecast]);
 };

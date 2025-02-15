@@ -6,7 +6,7 @@ function App() {
   const theme = useWeatherTheme();
   return (
     <div
-      className="app relative flex min-h-screen flex-col bg-cover bg-fixed bg-center bg-no-repeat text-white"
+      className="app relative flex min-h-svh flex-col bg-cover bg-fixed bg-center bg-no-repeat text-white"
       style={{ backgroundImage: `url(${theme.backgroundImage})` }}
     >
       <Header />

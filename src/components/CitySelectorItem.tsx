@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import useCurrentWeather from "../hooks/useCurrentWeather";
 import useForecast from "../hooks/useForecast";
 import useUpdateCurrentCity from "../hooks/useUpdateCurrentCity";
@@ -17,11 +18,13 @@ const CitySelectorItem: React.FC<CitySelectorItemProps> = ({
   const { fetchForecast } = useForecast();
   const { fetchCurrentWeather } = useCurrentWeather();
   const updateCurrentCity = useUpdateCurrentCity();
+  const navigate = useNavigate();
 
   const handleCitySelection = () => {
     fetchCurrentWeather({ latitude: city.latitude, longitude: city.longitude });
     fetchForecast({ latitude: city.latitude, longitude: city.longitude });
     updateCurrentCity(city);
+    navigate("/");
   };
 
   const handleToggleFavorite = (e: React.PointerEvent) => {

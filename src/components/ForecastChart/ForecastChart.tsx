@@ -49,7 +49,7 @@ const ForecastChart: React.FC = () => {
     return (
       <div className="w-full">
         <p className="mx-auto inline-block text-2xl text-white">
-          No forecast data available.
+          No forecast data available
         </p>
       </div>
     );

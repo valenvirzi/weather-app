@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router";
 import useLocationFetcher from "../hooks/useLocationFetcher"; // New hook for location handling
+import { useEffect, useRef } from "react";
 
 const icons = {
   loading: {
@@ -20,6 +22,17 @@ const icons = {
 
 const GetLocationButton: React.FC = () => {
   const { cityLoading, cityError, handleGetLocation } = useLocationFetcher();
+  const navigate = useNavigate();
+
+  const prevLoading = useRef(cityLoading); // Store previous cityLoading state
+
+  // Effect to detect when cityLoading goes from true to false and cityError is false
+  useEffect(() => {
+    if (prevLoading.current && !cityLoading && !cityError) {
+      navigate("/");
+    }
+    prevLoading.current = cityLoading; // Update previous state
+  }, [cityLoading, cityError, navigate]);
 
   const { src, alt, className } = cityLoading
     ? icons.loading
@@ -30,7 +43,7 @@ const GetLocationButton: React.FC = () => {
   return (
     <button
       type="button"
-      onClick={handleGetLocation}
+      onPointerDown={handleGetLocation}
       form="citySearchForm"
       className="cursor-pointer p-2"
       aria-label={alt}
