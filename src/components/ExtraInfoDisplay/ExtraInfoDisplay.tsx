@@ -33,7 +33,7 @@ const ExtraInfoDisplay: React.FC = () => {
           </div>
         </div>
         {weatherData.city ? (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col justify-between gap-2">
             <WeatherDisplaySelector
               extraWeatherDisplayed={extraWeatherDisplayed}
               setExtraWeatherDisplayed={setExtraWeatherDisplayed}
