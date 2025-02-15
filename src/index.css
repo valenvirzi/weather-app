@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  hanging-punctuation: first last;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+.app {
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 20rem;
+  --breakpoint-md: 28rem;
+  --breakpoint-lg: 48rem;
+  --breakpoint-xl: 64rem;
+  --breakpoint-2xl: 90rem;
+  --breakpoint-3xl: 120rem;
+}
