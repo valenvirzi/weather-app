@@ -12,7 +12,7 @@ const MainPage: React.FC = () => {
   return (
     <main className="relative flex grow flex-col gap-6 px-3 pt-7 pb-4 xl:px-5 2xl:px-7">
       <div
-        className={`absolute inset-0 opacity-55`}
+        className={`absolute inset-0 opacity-40`}
         style={{ backgroundColor: `${theme.color}` }}
       ></div>
       <CurrentWeatherDisplay />

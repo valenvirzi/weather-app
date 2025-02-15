@@ -49,7 +49,7 @@ const GetLocationButton: React.FC = () => {
       aria-label={alt}
     >
       <img
-        className={`aspect-square max-w-6 md:max-w-7 xl:max-w-8 ${className}`}
+        className={`pointer-events-none aspect-square max-w-6 md:max-w-7 xl:max-w-8 ${className}`}
         src={src}
         alt={alt}
       />

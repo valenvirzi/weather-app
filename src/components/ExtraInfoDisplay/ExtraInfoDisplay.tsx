@@ -38,7 +38,7 @@ const ExtraInfoDisplay: React.FC = () => {
               extraWeatherDisplayed={extraWeatherDisplayed}
               setExtraWeatherDisplayed={setExtraWeatherDisplayed}
             />
-            <div className="w-full overflow-x-auto">
+            <div className="min-h-64 w-full overflow-x-auto">
               {chartComponents[extraWeatherDisplayed]}
             </div>
           </div>
