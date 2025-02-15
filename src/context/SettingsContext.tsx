@@ -12,7 +12,7 @@ const defaultSettings: CurrentSettings = {
   tempUnit: "K",
   speedUnit: "m/s",
   dateFormat: "DD/MM",
-  language: "en",
+  // language: "en",
 };
 
 // Create the context
