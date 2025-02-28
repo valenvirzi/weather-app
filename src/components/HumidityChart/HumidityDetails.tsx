@@ -11,7 +11,7 @@ const HumidityDetails: React.FC<DetailsProps> = ({ children }) => {
   return (
     <div className="mb-2">
       <ul
-        className="flex justify-between px-[3.75rem]"
+        className="flex justify-between px-[3.75rem] py-2"
         style={{ width: `${forecastLength * 75}px` }}
       >
         {forecastData?.list.map((item) => {
