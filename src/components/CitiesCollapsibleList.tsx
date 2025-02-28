@@ -50,7 +50,7 @@ const CitiesCollapsibleList: React.FC<CitiesCollapsibleListProps> = ({
       <button
         className="flex w-full cursor-pointer items-center justify-between gap-2 border-b border-b-white bg-black p-2 px-2 pr-4"
         type="button"
-        onPointerDown={handleToggle}
+        onClick={handleToggle}
       >
         <div className="flex items-center gap-2">
           <img

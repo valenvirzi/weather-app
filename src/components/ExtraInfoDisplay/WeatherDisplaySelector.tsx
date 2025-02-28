@@ -18,7 +18,7 @@ const WeatherDisplaySelector: React.FC<WeatherDisplaySelectorProps> = ({
         <li key={value}>
           <button
             type="button"
-            onPointerDown={() => setExtraWeatherDisplayed(value)}
+            onClick={() => setExtraWeatherDisplayed(value)}
             className={`rounded border p-2 hover:bg-blue-600 ${
               extraWeatherDisplayed === value ? "bg-blue-600" : "bg-blue-500"
             }`}

@@ -27,7 +27,7 @@ const CitySelectorItem: React.FC<CitySelectorItemProps> = ({
     navigate("/");
   };
 
-  const handleToggleFavorite = (e: React.PointerEvent) => {
+  const handleToggleFavorite = (e: React.MouseEvent) => {
     e.stopPropagation();
     toggleFavoriteCity(city);
   };
@@ -35,7 +35,7 @@ const CitySelectorItem: React.FC<CitySelectorItemProps> = ({
   return (
     <button
       type="button"
-      onPointerDown={handleCitySelection}
+      onClick={handleCitySelection}
       className="flex w-full cursor-pointer items-stretch justify-between border-b border-b-white bg-black/75 px-4 py-2"
     >
       <div className="flex flex-col gap-1 text-left">
@@ -48,7 +48,7 @@ const CitySelectorItem: React.FC<CitySelectorItemProps> = ({
         role="button"
         tabIndex={0}
         className="grid cursor-pointer content-center p-2"
-        onPointerDown={handleToggleFavorite}
+        onClick={handleToggleFavorite}
         aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
       >
         <img

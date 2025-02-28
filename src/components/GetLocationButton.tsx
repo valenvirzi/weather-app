@@ -43,7 +43,7 @@ const GetLocationButton: React.FC = () => {
   return (
     <button
       type="button"
-      onPointerDown={handleGetLocation}
+      onClick={handleGetLocation}
       form="citySearchForm"
       className="cursor-pointer p-2"
       aria-label={alt}
@@ -52,7 +52,7 @@ const GetLocationButton: React.FC = () => {
         className={`aspect-square max-w-6 md:max-w-7 xl:max-w-8 ${className}`}
         src={src}
         alt={alt}
-        onPointerDown={(e) => e.preventDefault()}
+        onClick={(e) => e.preventDefault()}
       />
     </button>
   );

@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           <button
             type="button"
             className="cursor-pointer"
-            onPointerDown={() => navigate("/")}
+            onClick={() => navigate("/")}
           >
             <img
               className="w-6 md:w-7 xl:w-8"
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           <button
             type="button"
             className="cursor-pointer"
-            onPointerDown={() => navigate("/search")}
+            onClick={() => navigate("/search")}
           >
             <img
               className="w-6 md:w-7 xl:w-8"
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
           <button
             type="button"
             className="cursor-pointer"
-            onPointerDown={() => navigate("/")}
+            onClick={() => navigate("/")}
           >
             <img
               className="w-6 md:w-7 xl:w-8"
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
           <button
             type="button"
             className="cursor-pointer"
-            onPointerDown={() => navigate("/settings")}
+            onClick={() => navigate("/settings")}
           >
             <img
               className="w-6 md:w-7 xl:w-8"
