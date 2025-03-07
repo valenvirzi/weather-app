@@ -8,11 +8,13 @@ import { WeatherDataProvider } from "./context/WeatherDataContext.tsx";
 import SettingsPage from "./pages/SettingsPage.tsx";
 import MainPage from "./pages/MainPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
+import ErrorPage from "./pages/ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <MainPage /> },
       { path: "/settings", element: <SettingsPage /> },

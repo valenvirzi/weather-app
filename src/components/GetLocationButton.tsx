@@ -19,7 +19,7 @@ const icons = {
     className: "",
   },
 };
-
+// TODO: Fix this button on mobile
 const GetLocationButton: React.FC = () => {
   const { cityLoading, cityError, handleGetLocation } = useLocationFetcher();
   const navigate = useNavigate();
@@ -44,7 +44,6 @@ const GetLocationButton: React.FC = () => {
     <button
       type="button"
       onClick={handleGetLocation}
-      form="citySearchForm"
       className="cursor-pointer p-2"
       aria-label={alt}
     >
