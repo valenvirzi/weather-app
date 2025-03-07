@@ -56,7 +56,10 @@ const ForecastChart: React.FC = () => {
   }
 
   return (
-    <div className="w-full overflow-x-auto py-2">
+    <div
+      className="w-full overflow-x-auto py-2"
+      style={{ scrollbarColor: "#ffffff transparent" }}
+    >
       <ForecastDetails>
         <div className="mb-2 h-40 px-10" style={{ width: `${chartWidth}px` }}>
           <Line
