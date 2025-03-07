@@ -6,7 +6,7 @@ const useAutoUpdateWeather = () => {
   const { fetchForecast } = useForecast();
   const { fetchCurrentWeather } = useCurrentWeather();
 
-  const THREE_HOURS_MS = 10800000;
+  const ONE_HOUR_MS = 3600000;
 
   useEffect(() => {
     const storedWeather = localStorage.getItem("weatherData");
@@ -16,7 +16,7 @@ const useAutoUpdateWeather = () => {
 
     const { city, timestamp } = JSON.parse(storedWeather);
 
-    const isDataStale = Date.now() - timestamp > THREE_HOURS_MS;
+    const isDataStale = Date.now() - timestamp > ONE_HOUR_MS;
 
     if (city) {
       if (isDataStale) {
