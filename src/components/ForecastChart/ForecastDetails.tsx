@@ -11,7 +11,7 @@ const ForecastDetails: React.FC<DetailsProps> = ({ children }) => {
   return (
     <>
       <ul
-        className="flex justify-between px-6"
+        className="mb-2 flex justify-between px-6"
         style={{ width: `${(forecastLength - 1) * 100 + 100}px` }}
       >
         {forecastData?.list.map((item) => (
