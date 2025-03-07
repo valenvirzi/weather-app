@@ -16,7 +16,7 @@ const useLocationFetcher = () => {
 
   const handleGetLocation = () => {
     if (!navigator.geolocation) {
-      console.error("Geolocation is not supported by this browser.");
+      alert("Geolocation is not supported by this browser.");
       return;
     }
 
@@ -34,11 +34,11 @@ const useLocationFetcher = () => {
           fetchCurrentWeather(coordinates);
           fetchForecast(coordinates);
         } catch (error) {
-          console.error("Error fetching location data:", error);
+          alert(`Error fetching location data: ${error}`);
         }
       },
       (error) => {
-        console.error(`Geolocation error: ${error.message}`);
+        alert(`Geolocation error: ${error.message}`);
       },
     );
   };
