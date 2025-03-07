@@ -19,7 +19,7 @@ const icons = {
     className: "",
   },
 };
-// TODO: Fix this button on mobile
+
 const GetLocationButton: React.FC = () => {
   const { cityLoading, cityError, handleGetLocation } = useLocationFetcher();
   const navigate = useNavigate();
