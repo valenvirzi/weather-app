@@ -27,34 +27,36 @@ const CitySearchForm: React.FC<CitySearchFormProps> = ({ fetchCityList }) => {
   );
 
   return (
-    <form
-      id="citySearchForm"
-      onSubmit={handleCitySearch}
-      className="bg-opacity-80 flex items-stretch border-y border-y-white bg-black"
-    >
+    <div className="bg-opacity-80 flex items-stretch border-y border-y-white bg-black">
       <GetLocationButton />
-      <input
-        ref={inputRef}
-        type="text"
-        name="citySearchInput"
-        id="citySearchInput"
-        onChange={handleInputChange}
-        placeholder="London, Miami, etc..."
-        className="w-full bg-white p-2 px-4 text-black"
-      />
-      <button
-        type="submit"
-        form="citySearchForm"
-        className="cursor-pointer p-2"
-        aria-label="Search city name"
+      <form
+        id="citySearchForm"
+        onSubmit={handleCitySearch}
+        className="flex w-full"
       >
-        <img
-          className="aspect-square max-w-6 md:max-w-7 xl:max-w-8"
-          src="./img/search.svg"
-          alt="Search city name"
+        <input
+          ref={inputRef}
+          type="text"
+          name="citySearchInput"
+          id="citySearchInput"
+          onChange={handleInputChange}
+          placeholder="London, Miami, etc..."
+          className="w-full bg-white p-2 px-4 text-black"
         />
-      </button>
-    </form>
+        <button
+          type="submit"
+          form="citySearchForm"
+          className="cursor-pointer p-2"
+          aria-label="Search city name"
+        >
+          <img
+            className="aspect-square max-w-6 md:max-w-7 xl:max-w-8"
+            src="./img/search.svg"
+            alt="Search city name"
+          />
+        </button>
+      </form>
+    </div>
   );
 };
 

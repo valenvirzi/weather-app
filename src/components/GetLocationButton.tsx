@@ -43,10 +43,7 @@ const GetLocationButton: React.FC = () => {
   return (
     <button
       type="button"
-      onClick={() => {
-        alert("Button pressed");
-        handleGetLocation();
-      }}
+      onClick={handleGetLocation}
       className="cursor-pointer p-2"
       aria-label={alt}
     >
