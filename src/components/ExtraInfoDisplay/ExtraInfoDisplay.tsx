@@ -39,7 +39,7 @@ const ExtraInfoDisplay: React.FC = () => {
               setExtraWeatherDisplayed={setExtraWeatherDisplayed}
             />
             <div
-              className="min-h-64 w-full overflow-x-auto"
+              className="flex min-h-64 w-full overflow-x-auto"
               style={{ scrollbarColor: "#ffffff transparent" }}
             >
               {chartComponents[extraWeatherDisplayed]}
