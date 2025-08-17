@@ -63,3 +63,9 @@ Step 6: Access the application:
 # Open your browser and navigate to http://localhost:3000
 # Or whatever port you have it set up on your Vite configuration
    ```
+
+## Author
+
+**Valentin Virzi**
+* GitHub: [https://github.com/valenvirzi](https://github.com/valenvirzi)
+* Website/Portfolio: [https://valentin-virzi.vercel.app](https://valentin-virzi.vercel.app)
