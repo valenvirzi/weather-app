@@ -61,4 +61,5 @@ Step 6: Access the application:
 
    ```bash
 # Open your browser and navigate to http://localhost:3000
+# Or whatever port you have it set up on your Vite configuration
    ```
